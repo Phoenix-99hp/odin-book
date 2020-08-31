@@ -1,0 +1,38 @@
+.btn {
+  cursor: pointer;
+  border: none;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  background: none;
+  font-size: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  outline: none;
+}
+/* 
+.btn:nth-of-type(2) {
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+} */
+
+.btn:first-of-type {
+  border-right: 1px solid black;
+  border-left: none;
+}
+
+.btn:last-of-type {
+  border-left: 1px solid black;
+  border-right: none;
+}
+
+#actionBarContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: rgb(41, 158, 212);
+}

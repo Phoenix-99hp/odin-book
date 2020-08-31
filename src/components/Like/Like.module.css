@@ -1,0 +1,25 @@
+.likeContainer {
+	text-align: right;
+}
+
+.btn {
+	cursor: pointer;
+	margin-right: 5px;
+}
+
+.userLiked {
+	font-weight: bold;
+	color: rgb(102, 161, 13);
+}
+
+.regular {
+	color: black;
+}
+
+.showComments {
+	float: left;
+}
+
+.likeUnlike {
+	min-width: 70px;
+}

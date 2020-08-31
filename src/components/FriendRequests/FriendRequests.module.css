@@ -1,0 +1,34 @@
+#frContainer {
+  position: relative;
+  width: fit-content;
+}
+
+#frNumber {
+  position: absolute;
+  background-color: red;
+  color: white;
+  font-size: 15px;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 4px;
+  z-index: 99;
+  top: -4px;
+  /* margin: 0 auto; */
+}
+
+#viewFrs {
+  /* position: absolute;
+   right: 5px;
+   top: 30px; */
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  outline: none;
+}

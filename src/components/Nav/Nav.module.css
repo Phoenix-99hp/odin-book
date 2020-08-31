@@ -1,0 +1,24 @@
+#nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  padding: 20px;
+}
+
+.navItem {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 15px;
+  color: rgb(0, 162, 255);
+  outline: none;
+}
+
+.navItem:first-of-type {
+  border-right: 1px solid black;
+}
+
+.navItem:last-of-type {
+  border-left: 1px solid black;
+}

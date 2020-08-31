@@ -1,0 +1,90 @@
+#heading {
+    flex: 1 1 100%;
+    padding-bottom: 20px;
+    font-size: 25px;
+}
+
+#formContainer {
+    flex: 1 1 100%;
+    /* padding: 10px; */
+    width: 500px;
+    /* padding: 10px; */
+}
+
+#loginForm {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(187, 222, 243);
+    border-radius: 10px;
+    /* display: flex; */
+}
+
+.loginInput {
+    /* flex: 1 1 100%; */
+    width: 100%;
+    max-width: 300px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-left: 5px;
+    font-size: 16px;
+    margin-top: 5px;
+    /* float: right; */
+}
+
+#orSpan {
+    flex: 1 1 100%;
+    padding-bottom: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.formGroup {
+    padding-bottom: 15px;
+    /* width: fit-content; */
+    margin: 0 auto;
+}
+
+#facebookBtn, #loginBtn {
+    cursor: pointer;
+}
+
+#loginBtn {
+    background-color: rgb(148, 226, 31);
+    border: 1px solid black;
+    padding: 8px;
+    border-radius: 3px;
+    outline: none;
+}
+
+#facebookBtn {
+    background-color: rgb(85, 139, 238);
+    border: 1px solid black;
+    padding: 8px;
+    border-radius: 3px;
+    outline: none;
+    color: white;
+}
+
+#loginBtn:hover, #facebookBtn:hover{
+    opacity: 0.7;
+}
+
+#innerFormContainer {
+    text-align: center;
+}
+
+.loginLabel {
+    width: 100px;
+    text-align: left;
+}
+
+#noAccountSpan {
+    flex: 1 1 100%;
+    padding-top: 20px;
+}
+
+a{
+    color: rgb(8, 113, 235);
+    text-decoration: none;
+}

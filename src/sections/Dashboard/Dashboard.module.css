@@ -1,0 +1,80 @@
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+#friendReqForm {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgb(187, 222, 243);
+  border-radius: 10px;
+  position: relative;
+}
+
+#heading {
+  flex: 1 1 100%;
+  padding-bottom: 20px;
+  font-size: 25px;
+}
+
+.formGroup {
+  padding-bottom: 15px;
+  /* width: fit-content; */
+  margin: 0 auto;
+}
+
+#closeModalBtn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  background-color: red;
+  color: white;
+  border: none;
+  /* border: 1px solid black; */
+  outline: none;
+  border-radius: 2px;
+}
+
+#closeModalBtn:hover {
+  opacity: 0.7;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+#friendReqInput {
+  /* flex: 1 1 100%; */
+  width: 100%;
+  max-width: 300px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-left: 5px;
+  font-size: 16px;
+  margin-top: 5px;
+  /* float: right; */
+}
+
+#dashboardContainer {
+  flex: 1 1 100%;
+  position: relative;
+  width: 80%;
+}
+/* 
+#addFriendBtn {
+    position: absolute;
+    right: 5px;
+
+}
+
+#logoutBtn{
+    position: absolute;
+    right: 0;
+    top: 100px;
+} */

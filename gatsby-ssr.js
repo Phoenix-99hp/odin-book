@@ -5,3 +5,7 @@
  */
 
 // You can delete this file if you're not using it
+
+import GlobalContext from "./src/contexts/GlobalContext"
+
+export const wrapRootElement = GlobalContext
