@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
-import { getUser } from "../../services/auth";
+import { getUser, setUser } from "../../services/auth";
 import { navigate, Link } from "gatsby";
 import styles from "./UserList.module.css";
 import { ProfileContext } from "../../contexts/GlobalContext";
@@ -54,6 +54,7 @@ const UserList = () => {
 			.then((response) => {
 				if (response) {
 					console.log(response);
+					setUser(response);
 					window.location.reload();
 				} else {
 					console.log("no response");
@@ -88,6 +89,7 @@ const UserList = () => {
 			.then((response) => {
 				if (response) {
 					console.log(response);
+					setUser(response);
 					window.location.reload();
 				} else {
 					console.log("no response");
@@ -135,6 +137,58 @@ const UserList = () => {
 			});
 	};
 
+	const handleRemoveFriend = (e) => {
+		e.preventDefault();
+		const friendToRemove =
+			e.target.parentElement.previousElementSibling.textContent;
+		fetch(
+			`http://localhost:3001/api/friends/${currentUser._id}/${friendToRemove}/`,
+			{
+				method: "PUT",
+				mode: "cors",
+			}
+		)
+			.then((res) => {
+				return res.json();
+			})
+			.then((response) => {
+				if (response) {
+					console.log(response);
+					setUser(response);
+					window.location.reload();
+					// setUsers(response);
+				} else {
+					console.log("no response");
+					// navigate("/error")
+				}
+			})
+			.catch((error) => {
+				console.log("catch", error);
+				navigate("/error");
+			});
+	};
+
+	const handleSetProfile = (username) => {
+		fetch(`http://localhost:3001/api/profile/${username}`, {
+			method: "GET",
+			mode: "cors",
+		})
+			.then((res) => {
+				return res.json();
+			})
+			.then((response) => {
+				if (response) {
+					setProfile(response);
+				} else {
+					navigate("/error");
+				}
+			})
+			.catch((error) => {
+				console.log("catch profile", error);
+				navigate("/error");
+			});
+	};
+
 	return (
 		<div id={styles.userContainer}>
 			<button id={styles.closeModalBtn} onClick={() => navigate("/dashboard")}>
@@ -144,10 +198,19 @@ const UserList = () => {
 			{users[0] ? (
 				users.map((user, index) => (
 					<div className={styles.fr} key={index}>
+						<img
+							className={styles.avatar}
+							src={
+								"data:image/jpeg;base64," +
+								btoa(
+									String.fromCharCode(...new Uint8Array(user.avatar.data.data))
+								)
+							}
+						/>
 						<button
 							className={styles.username}
 							onClick={(e) => {
-								setProfile(e.target.textContent);
+								handleSetProfile(e.target.textContent);
 								navigate("/user");
 							}}
 						>
@@ -176,7 +239,12 @@ const UserList = () => {
 							</div>
 						) : currentUser.friends.includes(user._id) ? (
 							<div className={styles.btnContainer} data-index={index}>
-								<span className={styles.friend}>Your Friend</span>
+								<button
+									className={styles.btn}
+									onClick={(e) => handleRemoveFriend(e)}
+								>
+									Remove Friend
+								</button>
 							</div>
 						) : (
 							<div className={styles.btnContainer} data-index={index}>

@@ -1,64 +1,80 @@
 #container {
-  border: 2px solid black;
-  padding-top: 15px;
-  padding-bottom: 30px;
+	border: 2px solid black;
+	padding-top: 15px;
+	padding-bottom: 30px;
 }
 
 .pcContainer {
-  overflow-wrap: break-word;
-  white-space: pre-wrap;
-  border: 2px solid black;
-  margin: 0 auto;
-  margin-top: 15px;
-  max-width: 400px;
-  padding: 10px;
-  background-color: rgb(187, 222, 243);
-  border-radius: 10px;
+	overflow-wrap: break-word;
+	white-space: pre-wrap;
+	border: 2px solid black;
+	margin: 0 auto;
+	margin-top: 15px;
+	max-width: 400px;
+	padding: 10px;
+	background-color: rgb(187, 222, 243);
+	border-radius: 10px;
 }
 
 .commentUser,
 .postUser {
-  color: rgb(0, 119, 255);
+	color: rgb(0, 119, 255);
 }
 
 .dash {
-  color: black;
+	color: black;
 }
 
 .postTitle {
-  font-size: 20px;
-  font-weight: bold;
+	font-size: 25px;
+	font-weight: bold;
 }
 
 .space {
-  padding-bottom: 10px;
+	padding-bottom: 10px;
 }
 
 .timeSpan {
-  color: black;
-  padding-left: 5px;
+	color: black;
 }
 
 #seenAll {
-  padding-top: 45px;
-  padding-bottom: 15px;
+	padding-top: 45px;
+	padding-bottom: 15px;
 }
 
 .username {
-  cursor: pointer;
-  color: rgb(0, 119, 255);
-  border: none;
-  outline: none;
-  background: none;
-  padding: 0;
-  font-size: 15px;
+	cursor: pointer;
+	color: rgb(0, 119, 255);
+	border: none;
+	outline: none;
+	background: none;
+	padding: 0;
+	font-size: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 #feed {
-  font-weight: bold;
-  font-size: 30px;
+	font-weight: bold;
+	font-size: 30px;
 }
 
 .emptyFeed {
-  padding-bottom: 15px;
+	padding-bottom: 15px;
+}
+
+.postUser {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#avatar {
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.pBody {
+	font-size: 18px;
 }

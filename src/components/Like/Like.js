@@ -7,6 +7,7 @@ import { PostContext } from "../../contexts/GlobalContext";
 const Like = ({ count, post }) => {
 	const [likeCount, setLikeCount] = useState(count);
 	const [userLiked, setUserLiked] = useState(false);
+	const [isNavigating, setIsNavigating] = useState(false);
 	const { postId, setPost } = useContext(PostContext);
 	const currentUser = getUser()._id;
 
@@ -24,7 +25,6 @@ const Like = ({ count, post }) => {
 			})
 			.then((response) => {
 				if (response) {
-					console.log(response, "likeCheck");
 					setUserLiked(response);
 				} else {
 					console.log("no posts to display");
@@ -97,13 +97,14 @@ const Like = ({ count, post }) => {
 				<button
 					className={styles.btn}
 					onClick={() => {
-						setPost(post._id);
+						setPost([...postId, post._id]);
 						navigate("/writeComment");
 					}}
 				>
 					Comment
 				</button>
 				<button
+					disabled={post.user._id === currentUser ? true : false}
 					className={`${styles.btn} ${styles.likeUnlike}`}
 					onClick={(e) => handleLike(e)}
 				>

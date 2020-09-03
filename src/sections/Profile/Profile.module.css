@@ -1,5 +1,130 @@
 #profileContainer {
-  flex: 1 1 100%;
-  position: relative;
-  width: 80%;
+	/* flex: 1 1 100%; */
+	display: inline-flex;
+	flex-direction: row;
+	position: relative;
+	width: 80%;
+	text-align: center;
+	justify-content: center;
+	/*padding-left: 20px;
+	padding-right: 20px; */
+}
+
+#profileInfo {
+	width: fit-content;
+	position: absolute;
+	left: 0;
+	/* display: inline-flex; */
+	/* margin: 0 auto; */
+}
+
+.btn {
+	cursor: pointer;
+}
+
+#profileImg {
+	border-radius: 20px;
+}
+
+#username {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 30px;
+}
+
+#container {
+	border: 2px solid black;
+	padding-top: 15px;
+	padding-bottom: 30px;
+}
+
+.pcContainer {
+	overflow-wrap: break-word;
+	white-space: pre-wrap;
+	/* border: 2px solid black; */
+	margin: 0 auto;
+	margin-top: 15px;
+	max-width: 400px;
+	padding: 10px;
+	background-color: rgb(187, 222, 243);
+	border-radius: 10px;
+}
+
+.commentUser,
+.postUser {
+	color: rgb(0, 119, 255);
+}
+
+#avatar {
+	border-radius: 10px;
+}
+
+.postUser {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.dash {
+	color: black;
+}
+
+.postTitle {
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.space {
+	padding-bottom: 10px;
+}
+
+.timeSpan {
+	color: black;
+}
+
+#seenAll {
+	padding-top: 45px;
+	padding-bottom: 15px;
+}
+
+.username {
+	cursor: pointer;
+	color: rgb(0, 119, 255);
+	border: none;
+	outline: none;
+	background: none;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 20px;
+}
+
+#feed {
+	font-weight: bold;
+	font-size: 30px;
+}
+
+.emptyFeed {
+	padding-bottom: 15px;
+}
+
+#postsHeading {
+	font-size: 30px;
+	width: fit-content;
+	margin: 0 auto;
+	padding-bottom: 10px;
+}
+
+#postContainer {
+	/* text-align: center; */
+	align-self: center;
+	width: 100%;
+}
+
+.pBody {
+	font-size: 18px;
+}
+
+#postsHeading {
+	/* padding-bottom: 10px; */
+	font-weight: bold;
 }
